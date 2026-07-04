@@ -3,6 +3,7 @@ workflows:
     name: Android Build
 
     environment:
+      java: 1.8
       vars:
         GRADLE_OPTS: -Dorg.gradle.daemon=false
 
