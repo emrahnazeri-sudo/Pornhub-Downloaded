@@ -1,0 +1,14 @@
+workflows:
+  android-build:
+    name: Android Build
+
+    environment:
+      vars:
+        GRADLE_OPTS: -Dorg.gradle.daemon=false
+
+    scripts:
+      - chmod +x ./gradlew
+      - ./gradlew assembleDebug
+
+    artifacts:
+      - app/build/outputs/**/*.apk
